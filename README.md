@@ -1,17 +1,17 @@
+# iso-cv
+**mass-phenotyping of isopods using the opencv library** 
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [iso-cv](#iso-cv)
-  - [how to run the scripts](#how-to-run-the-scripts)
-  - [what is the output?](#what-is-the-output)
-  - [how does the code work?](#how-does-the-code-work)
-  - [camera script](#camera-script)
+- [how to run the scripts](#how-to-run-the-scripts)
+- [what is the output?](#what-is-the-output)
+- [how does the code work?](#how-does-the-code-work)
+- [camera script](#camera-script)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# iso-cv
-**mass-phenotyping of isopods using the opencv library** 
+---
 
 Here I explain the basic working principles for "high-throughput" phenotyping of the freshwater isopod *Asellus aquaticus* using the opencv library in python. For the scientific background refer to http://luerig.net/Research/#Isopods. For more detailed information on the actual code refer to the inline annotations inside the python scripts.
 
