@@ -6,7 +6,7 @@ Version 1.2
 @author: Moritz Lürig
 """
 
-# %% import packages
+#%% import packages
 
 import cv2
 import os
@@ -18,11 +18,11 @@ import math
 #%% set directories
 
 # make this your directory
-os.chdir("E:\GitHub\\iso-cv")
+os.chdir("E:\GitHub\\iso-cv\\python\\scanner")
 
 # in_dir should contain the images to analyze, out_dir is for the output that is generated (control images and text files)
-in_dir = "python\\in"
-out_dir = "python\\out"
+in_dir = "in"
+out_dir = "out"
 
 if not os.path.exists(out_dir):
     os.makedirs(out_dir)

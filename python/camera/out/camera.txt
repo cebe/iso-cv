@@ -1,0 +1,17 @@
+Family	Individual	File	Length	Area	Mean	StdDev
+fam137	01	fam137_01_t2_gray.jpg	2.69	1.7	221	11.5
+fam137	02	fam137_02_t2_gray.jpg	4.46	4.63	219	11.28
+fam137	03	fam137_03_t2_gray.jpg	6.43	8.45	192	21.37
+fam137	04	fam137_04_t2_gray.jpg	6.37	7.66	221	7.81
+fam137	06	fam137_06_t2_gray.jpg	3.6	2.81	221	8.9
+fam137	07	fam137_07_t2_gray.jpg	6.03	8.12	219	10.48
+fam137	08	fam137_08_t2_gray.jpg	5.89	7.82	225	7.98
+fam137	10	fam137_10_t2_gray.jpg	4.66	4.79	225	8.92
+fam137	14	fam137_14_t2_gray.jpg	7.11	9.79	215	11.29
+fam137	15	fam137_15_t2_gray.jpg	5.09	6.25	212	14.22
+fam137	16	fam137_16_t2_gray.jpg	6.06	8.1	216	8.02
+fam137	17	fam137_17_t2_gray.jpg	2.97	2.09	218	11.0
+fam137	20	fam137_20_t2_gray.jpg	3.49	2.83	213	14.02
+fam137	21	fam137_21_t2_gray.jpg	3.8	3.28	227	7.28
+fam137	22	fam137_22_t2_gray.jpg	6.2	7.77	206	15.76
+fam137	23	fam137_23_t2_gray.jpg	4.09	3.92	210	17.19
