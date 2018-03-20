@@ -3,8 +3,10 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [iso-cv](#iso-cv)
-  - [two types of scripts](#two-types-of-scripts)
-  - [working principle](#working-principle)
+  - [how to run the scripts](#how-to-run-the-scripts)
+  - [what is the output?](#what-is-the-output)
+  - [how does the code work?](#how-does-the-code-work)
+  - [camera script](#camera-script)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
