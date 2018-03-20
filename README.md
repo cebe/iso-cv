@@ -3,10 +3,7 @@
 
 Here I explain the basic working principles for "high-throughput" phenotyping of the freshwater isopod *Asellus aquaticus* using the opencv library in python. For the scientific background refer to http://luerig.net/Research/#Isopods. For more detailed information on the actual code refer to the inline annotations inside the python scripts.
 
-
-<img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig1.png width=70%>
-
-*This document aims at explaining the red arrow: how to extract phenotypic information from digital images*
+<img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig1.png width=100%>
 
 ---
 
@@ -19,7 +16,7 @@ download scripts from https://github.com/mluerig/iso-cv/tree/master/scripts
 - python (3.6)
 - opencv (3.3.1) + dependencies
 
-e.g.:
+install, for example, with anaconda:
 
 ```
 conda install opencv numpy os math copy
@@ -43,7 +40,7 @@ There are two types of procedures: one was programmed for use with scanner-image
 
 Additionally, a numeric label and x/y coordinates for the pixels are included so the control images can be attributed to the phenotypic information.
 
-<img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig2.png width=70%>
+<img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig2.png width=100%>
 
 *Left: dead specimens of A. aquaticus that were scanned in a modified flatbed-scanner. Right: alive specimen that was photographed with a camera-stand*
   
@@ -59,7 +56,7 @@ The scripts are using thresholding algorithms to segment the foreground, in our 
 
 <img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig3.png width=100%>
 
-*From left to right: the original image is converted to grayscale, thresholded (using one of the thresholding algorithms - white is "foreground", black is "background"), a bounding rectangle is drawn around the foreground area showing the region of interest (ROI), the ROI is used for the actual image analysis*
+*From left to right: the original image from the scanner is converted to grayscale, thresholded (using one of the thresholding algorithms - white is "foreground", black is "background"), a bounding rectangle is drawn around the foreground area showing the region of interest (ROI), the ROI is used for the actual image analysis*
 
 Within the ROI another thresholding operation is performed, but this time we need to get an "isopod-foreground" that is is clean as possible, and without legs and antennae. This is achieved with morphological operations, by which we first close holes and then erode the perimeter of the contour around the ispod. Once this has been done, a mask is created that spcecifies the area to be segmented from the image and thus the pixels that will be used to calculate the phenotype metrics. 
 
@@ -67,4 +64,26 @@ Within the ROI another thresholding operation is performed, but this time we nee
 
 <img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig4.png width=100%>
 
-* From left to right: ROI, thresholded ROI, mask after morphological operations, segmented isopod, area in ROI that was used for segmentation and the extraction of phenotypic information
+*From left to right: ROI, thresholded ROI, mask after morphological operations, segmented isopod, area in ROI that was used for segmentation and the extraction of phenotypic information*
+
+After the extraction, the data should be checked for errors and false positives. This can be artifacts or reflections from the scanner, or, as in this case, an isopod that was not completely inside the scanning area.
+
+<img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig5.png width=100%>
+
+---
+
+## camera script
+
+Pictures from a camera stand require additional treatment before they can be processed:
+
+1) Scale needs to be set for every set of pictures with different camera zoom
+2) Brightness / exposure can be different and needs to be matched
+3) Different cleaning operations have to be performed to remove noise and reflections from the images 
+
+<img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig6.png width=100%>
+
+*Left: colour/brightness control card with scale on it. Middle: different exposure (brighter image). Right: different zoom (zoomed in)*
+
+
+
+
