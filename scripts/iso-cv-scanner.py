@@ -145,7 +145,7 @@ for i in os.listdir(in_dir):
 # draw ROI-box and label into original image
                     img[max(0,ry-100):ry+h+100,max(0,rx-100):rx+w+100] = roi                    
                     img = cv2.rectangle(img,(max(0,rx-100),max(0,ry-100)),(rx+w+100,ry+h+100),(0,0, 255),3)
-                    cv2.putText(img, str(idx),(a,b), cv2.FONT_HERSHEY_SIMPLEX, 2,(255,255,255),3,cv2.LINE_AA)
+                    cv2.putText(img, str(idx),(a,b), cv2.FONT_HERSHEY_SIMPLEX, 2,(255,255,255),7,cv2.LINE_AA)
 
 # save control image                    
         cv2.imwrite(os.path.join(out_dir , i[0:len(i)-4] + '_' + 'output.jpg'), img)   
