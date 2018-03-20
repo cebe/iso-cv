@@ -1,0 +1,1 @@
+PyLabel	X	Y	Length	Area	Mean	StdDev	Min	Max
