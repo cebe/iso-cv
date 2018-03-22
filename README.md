@@ -4,6 +4,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [introduction](#introduction)
 - [how to run the scripts](#how-to-run-the-scripts)
 - [what is the output?](#what-is-the-output)
 - [how does the code work?](#how-does-the-code-work)
@@ -12,6 +13,8 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ---
+
+## introduction
 
 Here I explain the basic working principles for "high-throughput" phenotyping of the freshwater isopod *Asellus aquaticus* using the opencv library in python. For the scientific background refer to http://luerig.net/Research/#Isopods. For more detailed information on the actual code refer to the inline annotations inside the python scripts.
 
