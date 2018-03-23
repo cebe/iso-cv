@@ -69,7 +69,7 @@ The scripts are using thresholding algorithms to segment the foreground, in our 
 
 [https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html]
 
-<img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig3.png width=100%>
+<img src=images/iso-cv-fig3.png width=100%>
 
 *From left to right: the original image from the scanner is converted to grayscale, thresholded (using one of the thresholding algorithms - white is "foreground", black is "background"), a bounding rectangle is drawn around the foreground area showing the region of interest (ROI), the ROI is used for the actual image analysis*
 
@@ -77,13 +77,13 @@ Within the ROI another thresholding operation is performed, but this time we nee
 
 [https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html]
 
-<img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig4.png width=100%>
+<img src=images/iso-cv-fig4.png width=100%>
 
 *From left to right: ROI, thresholded ROI, mask after morphological operations, segmented isopod, area in ROI that was used for segmentation and the extraction of phenotypic information*
 
 After the extraction, the data should be checked for errors and false positives. This can be artifacts or reflections from the scanner, or, as in this case, an isopod that was not completely inside the scanning area.
 
-<img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig5.png width=100%>
+<img src=images/iso-cv-fig5.png width=100%>
 
 ---
 
@@ -95,7 +95,7 @@ Pictures from a camera stand require additional treatment before they can be pro
 2) Brightness / exposure can be different and needs to be matched
 3) Different cleaning operations have to be performed to remove noise and reflections from the images 
 
-<img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig6.png width=100%>
+<img src=images/iso-cv-fig6.png width=100%>
 
 *Left: colour/brightness control card with scale on it. Middle: different exposure (brighter image). Right: different zoom (zoomed in)*
 
