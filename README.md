@@ -18,9 +18,9 @@
 
 [https://github.com/mluerig/iso-cv](https://github.com/mluerig/iso-cv)
 
-**iso-cv** (isopod-computervision) is a collection of scripts I wrote for "high-throughput" phenotyping of the freshwater isopod *Asellus aquaticus* using the opencv library in python. Here I explain the basic working principles and workflow. For the scientific background refer to http://luerig.net/Research/#Isopods. For more detailed information on the actual code refer to the inline annotations inside the python scripts.
+**iso-cv** (isopod-computervision) is a collection of scripts I wrote for "high-throughput" phenotyping of the freshwater isopod *Asellus aquaticus* using the opencv library in python. Here I explain the basic working principles and workflow. For the scientific background refer to [http://luerig.net/Research/#Isopods](http://luerig.net/Research/#Isopods). For more detailed information on the actual code refer to the inline annotations inside the python scripts.
 
-**Please feel free to get in touch with me if you need help running the script or would like to customize it for your own study-system/organism: [contact @ eawag](http://www.eawag.ch/en/aboutus/portrait/organisation/staff/profile/moritz-luerig/show/)**
+**Please feel free to get in touch with me if you need help running the script or have questions about customizing it for your own study-system/organism: [contact @ eawag](http://www.eawag.ch/en/aboutus/portrait/organisation/staff/profile/moritz-luerig/show/)**
 
 <img src="images/iso-cv-fig1.png" />
 
@@ -69,15 +69,15 @@ Images created with a flatbed scanner have consistent exposure and fixed resolut
 
 ## how does the code work?
 
-The scripts are using thresholding algorithms to segment the foreground, in our case the isopod, from the background. Depending on the type of image, a different type of algorithm is used for segmentation (adaptive thresholding for camera images, or Otsu's binarization for scanned isopods). From a thresholded image then a binary mask can be created to select the region of interest (ROI) that will be inlcuded for phenotyping. This approach is computatively more intensive, but delivers better results as a ROI tends to have smaller variability as the whole image, which improves the result of the thresholding algorithms.  
+The scripts are using thresholding algorithms to segment the foreground, in our case the isopod, from the background. Depending on the type of image, a different type of algorithm is used for segmentation (adaptive thresholding for camera images, or Otsu's binarization for scanned isopods). Have a look at the opencv documentation for more details on thresholding: [https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html)
 
-[https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html)
+**i) - Finding the ROI.** From a thresholded image then a binary mask can be created to select the region of interest (ROI) that will be inlcuded for phenotyping. This approach is computatively more intensive than simply segmenting the whole image, but delivers better results as a ROI tends to have smaller variability as the whole image, which improves the result of the thresholding algorithms.  
 
 <img src="images/iso-cv-fig3.png" />
 
 *From left to right: the original image from the scanner is converted to grayscale, thresholded (using one of the thresholding algorithms - white is "foreground", black is "background"), a bounding rectangle is drawn around the foreground area showing the region of interest (ROI), the ROI is used for the actual image analysis*
 
-Within the ROI another thresholding operation is performed, but this time we need to get an "isopod-foreground" that is is clean as possible, and without legs and antennae. This is achieved with morphological operations, by which we first close holes and then erode the perimeter of the contour around the ispod. Once this has been done, a mask is created that spcecifies the area to be segmented from the image and thus the pixels that will be used to calculate the phenotype metrics. 
+**ii) - Segmentation inside the ROI.**  Within the ROI another thresholding operation is performed, but this time we need to get an "isopod-foreground" that is is clean as possible, and without legs and antennae. This is achieved with morphological operations, by which we first close holes and then erode the perimeter of the contour around the ispod. Once this has been done, a mask is created that spcecifies the area to be segmented from the image and thus the pixels that will be used to calculate the phenotype metrics. 
 
 [https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html)
 
