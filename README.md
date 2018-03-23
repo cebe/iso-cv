@@ -55,7 +55,7 @@ There are two types of procedures: one was programmed for use with scanner-image
 
 Additionally, a numeric label and x/y coordinates for the pixels are included so the control images can be attributed to the phenotypic information.
 
-<img src=https://mluerig.github.io/iso-cv/images/iso-cv-fig2.png width=100%>
+<img src="images/iso-cv-fig2.png" width=100%>
 
 *Left: dead specimens of A. aquaticus that were scanned in a modified flatbed-scanner. Right: alive specimen that was photographed with a camera-stand*
   
@@ -67,9 +67,9 @@ Images created with a flatbed scanner have consistent exposure and fixed resolut
 
 The scripts are using thresholding algorithms to segment the foreground, in our case the isopod, from the background. Depending on the type of image, a different type of algorithm is used for segmentation (adaptive thresholding for camera images, or Otsu's binarization for scanned isopods). From a thresholded image then a binary mask can be created to select the region of interest (ROI) that will be inlcuded for phenotyping. This approach is computatively more intensive, but delivers better results as a ROI tends to have smaller variability as the whole image, which improves the result of the thresholding algorithms.  
 
-[https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html]
+[https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html)
 
-<img src=images/iso-cv-fig3.png width=100%>
+<img src="images/iso-cv-fig3.png" width=100% />
 
 *From left to right: the original image from the scanner is converted to grayscale, thresholded (using one of the thresholding algorithms - white is "foreground", black is "background"), a bounding rectangle is drawn around the foreground area showing the region of interest (ROI), the ROI is used for the actual image analysis*
 
