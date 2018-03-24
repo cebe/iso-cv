@@ -20,7 +20,7 @@
 
 **Please feel free to get in touch with me if you need help running the script or have questions about customizing it for your own study-system/organism: [contact @ eawag](http://www.eawag.ch/en/aboutus/portrait/organisation/staff/profile/moritz-luerig/show/)**
 
-[![](https://mluerig.github.io/iso-cv/images/iso-cv-fig1.png)](#)
+<img src="https://github.com/mluerig/iso-cv/raw/master/images/iso-cv-fig1.png" />
 ---
 
 ## how to run the scripts
@@ -56,7 +56,7 @@ There are two types of procedures: one was programmed for use with scanner-image
 
 Additionally, a numeric label and x/y coordinates for the pixels are included so the control images can be attributed to the phenotypic information.
 
-<img src="images/iso-cv-fig2.png" />
+<img src="https://github.com/mluerig/iso-cv/raw/master/images/iso-cv-fig2.png" />
 
 *Left: dead specimens of A. aquaticus that were scanned in a modified flatbed-scanner. Right: alive specimen that was photographed with a camera-stand*
   
