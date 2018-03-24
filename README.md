@@ -20,7 +20,7 @@
 
 **Please feel free to get in touch with me if you need help running the script or have questions about customizing it for your own study-system/organism: [contact @ eawag](http://www.eawag.ch/en/aboutus/portrait/organisation/staff/profile/moritz-luerig/show/)**
 
-<img src="https://mluerig.github.io/iso-cv/images/iso-cv-fig1.png" />
+<img src="https://github.com/mluerig/iso-cv/blob/master/images/iso-cv-fig1.png" />
 
 ---
 
